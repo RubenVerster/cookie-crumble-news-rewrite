@@ -28,7 +28,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "compile-sass": "node-sass ./src/scss/main.scss ./src/css/main.css -w"
+    "compile-sass": "node-sass ./src/scss/main.scss ./public/main.css -w"
   },
   "eslintConfig": {
     "extends": [

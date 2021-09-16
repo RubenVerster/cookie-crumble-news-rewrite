@@ -3,7 +3,7 @@ import { IArticle, IArticlesCollection } from '../types/';
 
 const Article: React.FC<IArticlesCollection> = ({ articles }) => {
   const renderNewsArticles = (): JSX.Element[] | JSX.Element => {
-    if (articles == null || articles.length < 1) {
+    if (articles.length < 1) {
       return (
         <div className="container">
           <h3 className="mt-5 text-center text-primary">
@@ -22,7 +22,7 @@ const Article: React.FC<IArticlesCollection> = ({ articles }) => {
         </div>
       );
     } else {
-      const renderedArticles = articles.map(
+      return articles.map(
         ({ title, url, urlToImage, description, publishedAt }: IArticle) => {
           return (
             <div key={url} className="container">
@@ -69,7 +69,6 @@ const Article: React.FC<IArticlesCollection> = ({ articles }) => {
           );
         }
       );
-      return renderedArticles;
     }
   };
 
