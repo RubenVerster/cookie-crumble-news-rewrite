@@ -36,7 +36,10 @@ const App = () => {
     indexOfFirstArticle,
     indexOfLastArticle
   );
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <>
