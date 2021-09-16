@@ -20,16 +20,12 @@ const Pagination: React.FC<IPagination> = ({
         transform: 'translateY(-9px) ',
       }}
     >
-      <ul className="pagination ">
+      <ul className="pagination " style={{ cursor: 'pointer' }}>
         {pageNumbers.map((pageNumber) => (
           <li key={pageNumber} className="page-item">
-            <a
-              onClick={() => paginate(pageNumber)}
-              href="!#"
-              className="page-link"
-            >
+            <div onClick={() => paginate(pageNumber)} className="page-link">
               {pageNumber}
-            </a>
+            </div>
           </li>
         ))}
       </ul>
